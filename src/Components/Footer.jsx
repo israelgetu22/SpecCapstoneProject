@@ -1,4 +1,12 @@
-import { Facebook, Instagram, Telegram, Twitter } from "@material-ui/icons";
+import {
+  ContactPhoneOutlined,
+  Facebook,
+  Instagram,
+  MyLocationOutlined,
+  Telegram,
+  Twitter,
+  EmailOutlined,
+} from "@material-ui/icons";
 import React from "react";
 import styled from "styled-components";
 
@@ -12,19 +20,64 @@ const Left = styled.div`
   flex-direction: column;
   padding: 20px;
 `;
-const Center = styled.div`
-  flex: 1;
-`;
-const Right = styled.div`
-  flex: 1;
-`;
 
-const Logo = styled.div``;
+const Logo = styled.h1`
+  color: red;
+`;
 const Desc = styled.p`
   margin: 20px 0px;
 `;
-const SocialContainer = styled.div``;
-const SocialIcon = styled.div``;
+const SocialContainer = styled.div`
+  display: flex;
+`;
+const SocialIcon = styled.div`
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: white;
+  background-color: #${(props) => props.color};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+`;
+const Center = styled.div`
+  flex: 1;
+  padding: 20px;
+`;
+
+const Title = styled.h3`
+  margin-bottom: 30px;
+`;
+
+const List = styled.ul`
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+`;
+
+const ListItem = styled.li`
+  width: 50%;
+  margin-bottom: 10px;
+`;
+
+const Right = styled.div`
+  flex: 1;
+  padding: 20px;
+  position: relative;
+`;
+
+const ContactItem = styled.div`
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+`;
+// const Payment = styled.img`
+//   position: absolute;
+//   margin-bottom: 20px;
+// `;
 
 const Footer = () => {
   return (
@@ -39,22 +92,45 @@ const Footer = () => {
           “controlled component”
         </Desc>
         <SocialContainer>
-          <SocialIcon>
+          <SocialIcon color="3B5999">
             <Facebook />
           </SocialIcon>
-          <SocialIcon>
+          <SocialIcon color="E4405F">
             <Instagram />
           </SocialIcon>
-          <SocialIcon>
+          <SocialIcon color="55ACEE">
             <Telegram />
           </SocialIcon>
-          <SocialIcon>
+          <SocialIcon color="E60023">
             <Twitter />
           </SocialIcon>
         </SocialContainer>
       </Left>
-      <Center />
-      <Right />
+      <Center>
+        <Title>Useful Link</Title>
+        <List>
+          <ListItem>Home</ListItem>
+          <ListItem>Cart</ListItem>
+          <ListItem>Terms</ListItem>
+          <ListItem>Account</ListItem>
+          <ListItem>Home</ListItem>
+          <ListItem>WishList</ListItem>
+        </List>
+      </Center>
+      <Right>
+        <Title> Contact</Title>
+        <ContactItem>
+          <MyLocationOutlined style={{ marginRight: "10px" }} /> Dallas, Texas
+        </ContactItem>
+        <ContactItem>
+          <ContactPhoneOutlined style={{ marginRight: "10px" }} />
+          +1111 111 111
+        </ContactItem>
+        <ContactItem>
+          <EmailOutlined style={{ marginRight: "10px" }} /> contact@xstore.com
+        </ContactItem>
+        {/* <Payment src="https://i.ibb.co/4fFzqDV/d.png" /> */}
+      </Right>
     </Container>
   );
 };
