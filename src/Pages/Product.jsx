@@ -68,7 +68,7 @@ const FilterSize = styled.select`
 `;
 
 const FilterSizeOption = styled.option``;
-const AddConatiner = styled.div`
+const AddContainer = styled.div`
   width: 50%;
   display: flex;
   align-items: center;
@@ -90,7 +90,7 @@ const Amount = styled.span`
   margin: 0px 5px;
 `;
 const Button = styled.button`
-  padding: 15px;
+  padding: 5px;
   border: 1px solid teal;
   background-color: white;
   cursor: pointer;
@@ -131,14 +131,14 @@ const Product = () => {
               </FilterSize>
             </Filter>
           </FilterContainer>
-          <AddConatiner>
+          <AddContainer>
             <AmountContainer>
               <Remove />
               <Amount>1</Amount>
               <Add />
             </AmountContainer>
             <Button>ADD TO CART</Button>
-          </AddConatiner>
+          </AddContainer>
         </InfoContainer>
       </Wrapper>
       <Newsletter />
