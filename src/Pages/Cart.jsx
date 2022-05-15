@@ -32,7 +32,25 @@ const TopText = styled.span`
   cursor: pointer;
   margin: 0px 10px;
 `;
-const Bottom = styled.div``;
+const Bottom = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
+const Info = styled.div`
+  flex: 3;
+`;
+const Summary = styled.div`
+  flex: 1;
+`;
+
+const ProductDetail = styled.div``;
+const Image = styled.div``;
+const Details = styled.div``;
+const ProductName = styled.div``;
+const PriceDetail = styled.div``;
+const ProductId = styled.div``;
+const ProductColor = styled.div``;
+const ProductSize = styled.div``;
 
 const Cart = () => {
   return (
@@ -49,7 +67,27 @@ const Cart = () => {
           </TopTexts>
           <TopBottom type="filled">CHECKOUT NOW</TopBottom>
         </Top>
-        <Bottom></Bottom>
+        <Bottom>
+          <Info>
+            <ProductDetail>
+              <Image src="" />
+              <Details>
+                <ProductName>
+                  <b>Product:</b> JESSIE THUNDER SHOES
+                </ProductName>
+                <ProductId>
+                  <b>ID:</b> JESSIE THUNDER SHOES
+                </ProductId>
+                <ProductColor />
+                <ProductSize>
+                  <b>Size</b>37.5
+                </ProductSize>
+              </Details>
+            </ProductDetail>
+            <PriceDetail>Price</PriceDetail>
+          </Info>
+          <Summary>Summary</Summary>
+        </Bottom>
       </Wrapper>
       <Footer />
     </Container>
